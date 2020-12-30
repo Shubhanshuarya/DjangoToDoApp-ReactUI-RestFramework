@@ -42,6 +42,10 @@ INSTALLED_APPS = [
     # Application
     'todo',
 
+    # Additional Libraries
+    'corsheaders',            # add this
+    'rest_framework',         # add this
+
 ]
 
 MIDDLEWARE = [
@@ -52,6 +56,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    # Additional
+    'corsheaders.middleware.CorsMiddleware',    # add this
 ]
 
 ROOT_URLCONF = 'django_todoapp_react_djangorestframework.urls'
